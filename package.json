@@ -8,7 +8,7 @@
     "prepublish": "npm run build",
     "test": "jest --coverage",
     "test:cov": "nyc npm test",
-    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov --token=44187b3f-41f9-49ff-bc36-0d10a9e5be65"    
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov --token=44187b3f-41f9-49ff-bc36-0d10a9e5be65"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/faouzioudouh/react-tracker/issues"
   },
-  "homepage": "https://github.com/faouzioudouh/react-tracker#readme",
+  "homepage": "https://coding-to-music.github.io/react-tracker/",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.2",
