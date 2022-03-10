@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/faouzioudouh/react-tracker/issues"
   },
-  "homepage": "https://coding-to-music.github.io/react-tracker/",
+  "homepage": "https://coding-to-music.github.io/react-tracker/docs/build/",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.2",
