@@ -4,6 +4,8 @@
   "description": "Track user interaction with React based apps",
   "main": "build/index.js",
   "scripts": {
+    "buildDemo": "cd demo && npm run build",
+    "deployDemo": "gh-pages -d demo/build",
     "build": "webpack",
     "prepublish": "npm run build",
     "test": "jest --coverage",
@@ -12,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faouzioudouh/react-tracker.git"
+    "url": "git+https://github.com/coding-to-music/react-tracker.git"
   },
   "keywords": [
     "React",
@@ -23,9 +25,9 @@
   "author": "Faouzi Oudouh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/faouzioudouh/react-tracker/issues"
+    "url": "https://github.com/coding-to-music/react-tracker/issues"
   },
-  "homepage": "https://coding-to-music.github.io/react-tracker/docs/build/",
+  "homepage": "https://coding-to-music.github.io/react-tracker/",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.2",
@@ -33,16 +35,17 @@
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "codecov": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.1.4",
+    "nyc": "^11.4.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "webpack": "^3.6.0",
-    "nyc": "^11.4.1",
-    "codecov": "^3.0.0"
+    "webpack": "^3.6.0"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {
