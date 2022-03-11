@@ -11,9 +11,9 @@ import configureStore from "../store/configureStore";
 import trackingMiddleware from "../tracking/trackingMiddleware";
 import configuredTracker from "../tracking/configureTracker";
 
-import buildInfo from "../buildInfo";
+// import buildInfo from "../buildInfo";
 
-const buildDate = new Date(buildInfo.buildDate);
+// const buildDate = new Date(buildInfo.buildDate);
 
 // class App extends Component {
 //   componentDidMount() {
