@@ -1,15 +1,25 @@
-import React, { Component } from 'react';
-import Highlight from 'react-highlight';
-import { TrackerProvider } from 'react-tracker'
-import { ToastContainer, toast } from 'react-toastify';
+import React, { Component } from "react";
+import Highlight from "react-highlight";
+import { TrackerProvider } from "react-tracker";
+import { ToastContainer, toast } from "react-toastify";
 
-import GroceryStoreApp from './GroceryStoreApp';
-import storeProvider from '../hoc/storeProvider';
-import configureStore from '../store/configureStore';
+import GroceryStoreApp from "./GroceryStoreApp";
+import storeProvider from "../hoc/storeProvider";
+import configureStore from "../store/configureStore";
 
 // get the tracker
-import trackingMiddleware from '../tracking/trackingMiddleware';
-import configuredTracker from '../tracking/configureTracker';
+import trackingMiddleware from "../tracking/trackingMiddleware";
+import configuredTracker from "../tracking/configureTracker";
+
+import buildInfo from "../buildInfo";
+
+const buildDate = new Date(buildInfo.buildDate);
+
+// class App extends Component {
+//   componentDidMount() {
+//     console.log(`Build Number: ${buildInfo.buildVersion}`);
+//     console.log(`Build Date: ${buildDate.toString()}`);
+//   }
 
 // Configure the store, with tracking middleware.
 const store = configureStore({}, trackingMiddleware(configuredTracker));
@@ -18,24 +28,24 @@ const provideStore = storeProvider(store);
 const GroceryStoreAppWithStore = provideStore(GroceryStoreApp);
 
 // Component to format JSON and display it!
-const DisplayJson = dataLayer => (
-  <Highlight className="json">
-    {JSON.stringify(dataLayer, null, 2)}
-  </Highlight>
-)
+const DisplayJson = (dataLayer) => (
+  <Highlight className="json">{JSON.stringify(dataLayer, null, 2)}</Highlight>
+);
 
 export default class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      dataLayer: {}
-    }
+      dataLayer: {},
+    };
   }
 
   componentWillMount() {
-    configuredTracker.on('*', event => {
-      toast(`Event Tracked: ${event.type} ${event.from ? `from ${event.from}` : ''}`);
+    configuredTracker.on("*", (event) => {
+      toast(
+        `Event Tracked: ${event.type} ${event.from ? `from ${event.from}` : ""}`
+      );
       this.setState({
         dataLayer: window.dataLayer,
       });

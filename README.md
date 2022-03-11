@@ -2,6 +2,12 @@
 
 _Track user interaction with minimal API_
 
+By Faouzi Oudouh https://github.com/faouzioudouh
+
+https://github.com/faouzioudouh/react-tracker
+
+https://github.com/coding-to-music/react-tracker
+
 ## Demo
 
 To see the react-tracker in action please visit the link below.
