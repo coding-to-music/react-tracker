@@ -11,6 +11,9 @@ class App extends Component {
     console.log(`Build Date: ${buildDate.toString()}`);
   }
 
+  console.log(`Build Number: ${buildInfo.buildVersion}`);
+  console.log(`Build Date: ${buildDate.toString()}`);
+
   render() {
     return (
       <div className="App">
